@@ -1,0 +1,115 @@
+.toolbarRow {
+  display: flex;
+  align-items: center;
+  height: 28px;
+  padding: 1px 4px;
+  gap: 1px;
+  background: linear-gradient(180deg, #f7f6f1 0%, #e6e4dc 100%);
+  border-bottom: 1px solid #b2aea4;
+  flex-shrink: 0;
+  user-select: none;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.formatRow {
+  display: flex;
+  align-items: center;
+  height: 28px;
+  padding: 1px 4px;
+  gap: 2px;
+  background: linear-gradient(180deg, #eeebe4 0%, #dedbd2 100%);
+  border-bottom: 1px solid #a8a49c;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.toolBtn {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 0;
+  color: #222;
+  transition: all 0.1s;
+}
+
+.toolBtn:hover {
+  background: rgba(49, 106, 197, 0.12);
+  border-color: #316ac5;
+}
+
+.toolBtn:active {
+  background: rgba(49, 106, 197, 0.25);
+  border-color: #1a4a9a;
+}
+
+.toolBtnActive {
+  background: #c8d8f0 !important;
+  border-color: #316ac5 !important;
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.toolSep {
+  width: 1px;
+  height: 20px;
+  background: #c0bdb5;
+  margin: 0 3px;
+  flex-shrink: 0;
+}
+
+.selectInput {
+  height: 22px;
+  font-size: 11.5px;
+  border: 1px solid #7f9db9;
+  background: #ffffff;
+  padding: 0 4px;
+  color: #1a1a1a;
+  outline: none;
+}
+
+.fontSelect {
+  composes: selectInput;
+  width: 125px;
+}
+
+.sizeSelect {
+  composes: selectInput;
+  width: 48px;
+}
+
+.lineWidthSelect {
+  composes: selectInput;
+  width: 62px;
+}
+
+.zoomLabel {
+  font-size: 11px;
+  color: #444;
+  padding: 0 4px;
+  min-width: 40px;
+  text-align: center;
+  font-family: 'JetBrains Mono', Consolas, monospace;
+}
+
+.colorPickerWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.hiddenColorInput {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+

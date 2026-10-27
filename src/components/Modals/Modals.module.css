@@ -1,0 +1,160 @@
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+}
+
+.dialogWindow {
+  width: 440px;
+  max-width: 90vw;
+  background: #f0efe8;
+  border: 1px solid #7f9db9;
+  box-shadow: 1px 1px 0 #fff inset, -1px -1px 0 #707070 inset, 4px 6px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  user-select: none;
+}
+
+.dialogTitleBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 26px;
+  padding: 0 4px 0 8px;
+  background: linear-gradient(180deg, #3870b2 0%, #205088 100%);
+  color: #fff;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.dialogCloseBtn {
+  width: 18px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-size: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+}
+
+.dialogCloseBtn:hover {
+  background: #c0392b;
+}
+
+.tabHeader {
+  display: flex;
+  background: #e8e6df;
+  border-bottom: 1px solid #7f9db9;
+  padding: 4px 8px 0;
+  gap: 3px;
+}
+
+.tabBtn {
+  padding: 4px 10px;
+  font-size: 11.5px;
+  color: #333;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-bottom: none;
+  border-radius: 3px 3px 0 0;
+}
+
+.tabBtnActive {
+  background: #f0efe8;
+  border-color: #7f9db9;
+  color: #1a1a1a;
+  font-weight: 600;
+  margin-bottom: -1px;
+  position: relative;
+  z-index: 1;
+}
+
+.dialogBody {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.propSection {
+  border: 1px solid #d4d0c8;
+  border-radius: 2px;
+  padding: 10px;
+  background: #ffffff;
+}
+
+.sectionHeader {
+  font-size: 11px;
+  font-weight: 700;
+  color: #205088;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.propRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+.propRow:last-child {
+  margin-bottom: 0;
+}
+
+.propRow label {
+  color: #444;
+}
+
+.propRow select,
+.propRow input {
+  height: 22px;
+  padding: 1px 4px;
+  border: 1px solid #7f9db9;
+  font-size: 11.5px;
+}
+
+.dialogFooter {
+  height: 42px;
+  background: #e8e6df;
+  border-top: 1px solid #d0cec7;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 12px;
+  gap: 8px;
+}
+
+.btn {
+  height: 24px;
+  min-width: 65px;
+  padding: 0 10px;
+  background: linear-gradient(180deg, #fff 0%, #ece9d8 100%);
+  border: 1px solid #7f9db9;
+  border-radius: 2px;
+  font-size: 11.5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #f8f8f8;
+  border-color: #316ac5;
+}
+
+.btnPrimary {
+  composes: btn;
+  font-weight: 600;
+  border-color: #205088;
+}
+

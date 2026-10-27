@@ -1,0 +1,128 @@
+.propertiesPanel {
+  width: 230px;
+  background: linear-gradient(180deg, #f4f2ec 0%, #e6e4dc 100%);
+  border-left: 1px solid #7f9db9;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  flex-shrink: 0;
+  user-select: none;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-size: 11.5px;
+}
+
+.panelHeader {
+  height: 24px;
+  background: linear-gradient(180deg, #dddbd2 0%, #ccc9c0 100%);
+  border-bottom: 1px solid #a8a49c;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  gap: 6px;
+}
+
+.section {
+  padding: 8px 10px;
+  border-bottom: 1px solid #c8c4bc;
+}
+
+.sectionTitle {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #205088;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #d8d4cc;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 6px;
+}
+
+.row:last-child {
+  margin-bottom: 0;
+}
+
+.rowInline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.label {
+  font-size: 11px;
+  color: #444;
+}
+
+.input,
+.select {
+  height: 22px;
+  width: 100%;
+  font-size: 11.5px;
+  border: 1px solid #7f9db9;
+  background: #ffffff;
+  padding: 1px 5px;
+  color: #1a1a1a;
+  outline: none;
+  user-select: text !important;
+  -webkit-user-select: text !important;
+}
+
+.colorRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.colorInput {
+  width: 32px;
+  height: 22px;
+  padding: 0;
+  border: 1px solid #7f9db9;
+  cursor: pointer;
+}
+
+.actionBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 5px 8px;
+  margin-bottom: 5px;
+  background: linear-gradient(180deg, #ffffff 0%, #ece9d8 100%);
+  border: 1px solid #7f9db9;
+  border-radius: 2px;
+  font-size: 11.5px;
+  cursor: pointer;
+  color: #1a1a1a;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.actionBtn:hover {
+  background: #f8f8f8;
+  border-color: #316ac5;
+}
+
+.actionBtnPrimary {
+  composes: actionBtn;
+  background: linear-gradient(180deg, #3a8ee6 0%, #1e5ba8 100%);
+  color: #ffffff;
+  border-color: #154682;
+  font-weight: 600;
+}
+
+.actionBtnPrimary:hover {
+  background: linear-gradient(180deg, #4da0f8 0%, #256dc4 100%);
+}
+

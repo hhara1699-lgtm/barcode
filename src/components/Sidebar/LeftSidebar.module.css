@@ -1,0 +1,133 @@
+.leftSidebar {
+  width: 190px;
+  background: #f0efe8;
+  border-right: 1px solid #7f9db9;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  user-select: none;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-size: 11.5px;
+}
+
+.sidebarHeader {
+  height: 22px;
+  background: linear-gradient(180deg, #dddbd2 0%, #ccc9c0 100%);
+  border-bottom: 1px solid #a8a49c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px 0 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #333;
+}
+
+.sidebarCloseBtn {
+  background: transparent;
+  border: none;
+  font-size: 10px;
+  cursor: pointer;
+  color: #555;
+  padding: 2px;
+}
+
+.sidebarCloseBtn:hover {
+  color: #000;
+}
+
+.treeContainer {
+  flex: 1;
+  overflow-y: auto;
+  padding: 6px 4px;
+  background: #ffffff;
+  border: 1px solid #c0bdb5;
+  margin: 4px;
+}
+
+.treeNode {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 4px;
+  cursor: pointer;
+  border-radius: 2px;
+  color: #222;
+}
+
+.treeNode:hover {
+  background: #e6f0fa;
+}
+
+.treeNodeSelected {
+  background: #316ac5 !important;
+  color: #ffffff !important;
+}
+
+.treeToggleIcon {
+  width: 12px;
+  font-size: 9px;
+  color: #666;
+  text-align: center;
+  display: inline-block;
+}
+
+.treeIcon {
+  font-size: 12px;
+  width: 14px;
+  text-align: center;
+}
+
+.treeChildren {
+  margin-left: 14px;
+  padding-left: 4px;
+  border-left: 1px dotted #ccc;
+}
+
+.sampleItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 6px;
+  cursor: pointer;
+  border-radius: 2px;
+  font-size: 11px;
+}
+
+.sampleItem:hover {
+  background: #dbeaff;
+}
+
+.tabFooter {
+  display: flex;
+  background: #e8e6df;
+  border-top: 1px solid #a8a49c;
+  height: 24px;
+}
+
+.tabBtn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 10.5px;
+  background: transparent;
+  border: none;
+  border-right: 1px solid #c0bdb5;
+  cursor: pointer;
+  color: #444;
+  padding: 0 4px;
+}
+
+.tabBtn:last-child {
+  border-right: none;
+}
+
+.tabBtnActive {
+  background: #ffffff;
+  color: #1a1a1a;
+  font-weight: 600;
+  border-top: 2px solid #205088;
+}
+

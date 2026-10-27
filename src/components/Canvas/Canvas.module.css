@@ -1,0 +1,221 @@
+.canvasWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+  background: #7a97b2;
+}
+
+/* ─── Top Horizontal Ruler ────────────────────────────────────────────────── */
+
+.rulerTopRow {
+  display: flex;
+  height: 18px;
+  background: #e8e6df;
+  border-bottom: 1px solid #7f9db9;
+  flex-shrink: 0;
+}
+
+.rulerCorner {
+  width: 18px;
+  height: 18px;
+  background: #dcd8cf;
+  border-right: 1px solid #7f9db9;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  color: #666;
+}
+
+.rulerHorizontal {
+  flex: 1;
+  height: 18px;
+  position: relative;
+  overflow: hidden;
+  background: #f4f2ec;
+}
+
+/* ─── Center Viewport with Left Vertical Ruler ────────────────────────────── */
+
+.centerRow {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.rulerVertical {
+  width: 18px;
+  background: #f4f2ec;
+  border-right: 1px solid #7f9db9;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.scrollArea {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 60px;
+}
+
+/* ─── Label Artboard (Photo 13) ───────────────────────────────────────────── */
+
+.artboardContainer {
+  position: relative;
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.3),
+    4px 5px 18px rgba(0, 0, 0, 0.45);
+  background: #ffffff;
+  transition: width 0.1s, height 0.1s;
+}
+
+.artboardGrid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-size: 10px 10px;
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+}
+
+.artboardWatermark {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* ─── Objects on Canvas ───────────────────────────────────────────────────── */
+
+.canvasObject {
+  position: absolute;
+  cursor: move;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.canvasObjectSelected {
+  outline: 1.5px dashed #205088;
+  outline-offset: 1px;
+}
+
+.objectSvgBarcode,
+.objectCanvasBarcode {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.objectText {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  word-break: break-word;
+  line-height: 1.2;
+}
+
+.inlineInput {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1.5px solid #205088;
+  border-radius: 2px;
+  outline: none;
+  box-shadow: 0 0 6px rgba(32, 80, 136, 0.35);
+  box-sizing: border-box;
+  user-select: text !important;
+  -webkit-user-select: text !important;
+}
+
+/* ─── Resize Handles ──────────────────────────────────────────────────────── */
+
+.handle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  border: 1px solid #205088;
+  z-index: 100;
+}
+
+.handleNw { top: -4px; left: -4px; cursor: nw-resize; }
+.handleN  { top: -4px; left: calc(50% - 3px); cursor: n-resize; }
+.handleNe { top: -4px; right: -4px; cursor: ne-resize; }
+.handleE  { top: calc(50% - 3px); right: -4px; cursor: e-resize; }
+.handleSe { bottom: -4px; right: -4px; cursor: se-resize; }
+.handleS  { bottom: -4px; left: calc(50% - 3px); cursor: s-resize; }
+.handleSw { bottom: -4px; left: -4px; cursor: sw-resize; }
+.handleW  { top: calc(50% - 3px); left: -4px; cursor: w-resize; }
+
+/* ─── Rotate Handle ──────────────────────────────────────────────────────── */
+
+.rotateStem {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  width: 1px;
+  height: 13px;
+  background: #205088;
+  z-index: 101;
+  pointer-events: none;
+}
+
+.rotateHandle {
+  position: absolute;
+  top: -24px;
+  left: calc(50% - 6px);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #2ecc71;
+  border: 1.5px solid #205088;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+  z-index: 102;
+  cursor: grab;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.1s, background 0.1s;
+}
+
+.rotateHandle:hover {
+  transform: scale(1.25);
+  background: #27ae60;
+}
+
+.rotateHandle:active {
+  cursor: grabbing;
+}
+
+/* ─── Hairline Guide Lines on Rulers ──────────────────────────────────────── */
+
+.rulerIndicatorH {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #e74c3c;
+  pointer-events: none;
+}
+
+.rulerIndicatorV {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #e74c3c;
+  pointer-events: none;
+}
+

@@ -1,0 +1,304 @@
+/* ─── BarTender UltraLite Window Frame ─────────────────────────────────────── */
+
+.appShell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: #d4d0c8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 12px;
+  color: #1a1a1a;
+  user-select: none;
+}
+
+/* ─── Classic Windows Title Bar ───────────────────────────────────────────── */
+
+.titleBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 28px;
+  padding: 0 4px 0 8px;
+  background: linear-gradient(180deg, #3a6ea5 0%, #1e4a8a 100%);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.titleBarLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.appLogoMark {
+  display: flex;
+  align-items: center;
+}
+
+.titleBarControls {
+  display: flex;
+  gap: 2px;
+}
+
+.wc {
+  width: 22px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  font-size: 11px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  transition: background 0.1s;
+}
+
+.wc:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.wcClose:hover {
+  background: #c0392b !important;
+}
+
+/* ─── Menu Bar ───────────────────────────────────────────────────────────── */
+
+.menuBar {
+  display: flex;
+  align-items: stretch;
+  height: 22px;
+  background: linear-gradient(180deg, #f0efe8 0%, #dddbd2 100%);
+  border-bottom: 1px solid #a8a49c;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 500;
+}
+
+.menuItem {
+  position: relative;
+}
+
+.menuBtn {
+  height: 100%;
+  padding: 0 10px;
+  background: transparent;
+  border: none;
+  font-size: 12px;
+  color: #1a1a1a;
+  cursor: pointer;
+  white-space: nowrap;
+  outline: none;
+}
+
+.menuBtn:hover,
+.menuBtnActive {
+  background: #316ac5 !important;
+  color: #ffffff !important;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 190px;
+  background: #f7f6f2;
+  border: 1px solid #7f9db9;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 600;
+  padding: 3px 0;
+}
+
+.ddItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 4px 16px 4px 8px;
+  background: transparent;
+  border: none;
+  font-size: 12px;
+  color: #1a1a1a;
+  cursor: pointer;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.ddItem:hover {
+  background: #316ac5;
+  color: #ffffff;
+}
+
+.ddIcon {
+  width: 16px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.ddKey {
+  margin-left: auto;
+  padding-left: 16px;
+  font-size: 11px;
+  color: #777;
+}
+
+.ddItem:hover .ddKey {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.ddSep {
+  height: 1px;
+  background: #c8c4bc;
+  margin: 3px 0;
+}
+
+/* ─── Document Tab Strip (Photo 13: AAF.btw x, Document1.btw * x) ────────── */
+
+.docTabStrip {
+  display: flex;
+  align-items: flex-end;
+  height: 25px;
+  background: #dedbd2;
+  border-bottom: 1px solid #7f9db9;
+  padding: 2px 8px 0;
+  gap: 3px;
+  flex-shrink: 0;
+}
+
+.docTab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 23px;
+  padding: 0 10px;
+  background: #eae8e1;
+  border: 1px solid #a8a49c;
+  border-bottom: none;
+  border-radius: 3px 3px 0 0;
+  font-size: 11.5px;
+  color: #444;
+  cursor: pointer;
+  max-width: 180px;
+}
+
+.docTab:hover {
+  background: #f4f2ec;
+}
+
+.docTabActive {
+  background: #ffffff !important;
+  color: #1a1a1a !important;
+  font-weight: 600;
+  border-color: #7f9db9;
+  margin-bottom: -1px;
+  padding-top: 1px;
+  border-top: 2px solid #205088;
+  position: relative;
+  z-index: 2;
+}
+
+.docTabClose {
+  font-size: 10px;
+  color: #777;
+  padding: 1px 3px;
+  border-radius: 2px;
+  line-height: 1;
+}
+
+.docTabClose:hover {
+  background: #c0392b;
+  color: #ffffff;
+}
+
+.docTabNew {
+  height: 20px;
+  width: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: 13px;
+  color: #444;
+  border-radius: 2px;
+}
+
+.docTabNew:hover {
+  background: #f0efe8;
+  border-color: #a8a49c;
+}
+
+/* ─── Main Workspace Layout ───────────────────────────────────────────────── */
+
+.workspace {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ─── Bottom Status Bar & Sheet Tabs (Photo 13: Template 1, Form 1) ──────── */
+
+.statusBar {
+  height: 24px;
+  background: linear-gradient(180deg, #dddbd2 0%, #ccc9c0 100%);
+  border-top: 1px solid #7f9db9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px 0 0;
+  font-size: 11.5px;
+  color: #333;
+  flex-shrink: 0;
+}
+
+.sheetTabs {
+  display: flex;
+  height: 100%;
+}
+
+.sheetTab {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 100%;
+  padding: 0 12px;
+  background: transparent;
+  border: none;
+  border-right: 1px solid #b0aca4;
+  font-size: 11px;
+  color: #444;
+  cursor: pointer;
+}
+
+.sheetTabActive {
+  background: #ffffff;
+  color: #1a1a1a;
+  font-weight: 700;
+  border-bottom: 2px solid #205088;
+}
+
+.statusIndicators {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #444;
+  font-size: 11px;
+}
+
+.statusItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.statusCoords {
+  font-family: 'JetBrains Mono', Consolas, monospace;
+  min-width: 90px;
+}
